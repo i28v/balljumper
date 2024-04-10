@@ -33,7 +33,7 @@ entity* create_platform(double start_x, double start_y)
     collision_data* coll_d = get_component(collision, plat_spr);
     coll_d->sync_hitbox_pos = 0;
 
-    SDL_Texture* platform_texture == (plat_d->type == normal) ? textures[PLATFORM] : textures[PLATFORM_BREAKING];
+    SDL_Texture* platform_texture = (plat_d->type == normal) ? textures[PLATFORM] : textures[PLATFORM_BREAKING];
      
     set_texture_data(plat_spr, platform_texture, pos_d->x, pos_d->y, 32, 16);
     set_collision_data(plat_spr, pos_d->x, pos_d->y, 32, 8);
